@@ -1,0 +1,3 @@
+git init -> Git just told us, our "octobox" directory now has an empty repository in /.git/. The repository is a hidden directory where Git operates.
+
+git status -> 

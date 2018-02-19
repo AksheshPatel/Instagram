@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .img-circle {
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin-top: 25px;
+        margin-left: 40px;
+        display: inline-block;
+        border-radius: 50%;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-4 ">
+        <div class="row" style="margin-left:150px;">
+            {% if user.avatar %}
+                <img src="{{ user.avatar.url }}" class="img-circle img-resposive" style="">
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-lg-4 ">
+        <div class="row">
+            <h3 style="right: 100px; font-family: 'Arial', serif;">{{ user.username }} &nbsp; &nbsp;
+            <a href="{% url "editprofile" request.user.id %}" class="btn btn-primary" role="button">Edit Profile</a></h3>
+        </div>
+        <div class="row">
+            <p>
+                <h4>{{ user.post.count }} Posts &nbsp; &nbsp;
+                <a href="{% url "profile_follower" request.user.id %}"> {{ user.following.count}} Followers </a> &nbsp; &nbsp;
+                <a href="{% url "profile_following" request.user.id %}"> {{ user.follower.count}} Following</a> &nbsp; &nbsp; </h4>
+            </p>
+        </div>
+        <div class="row">
+            <h3 style="font-size: medium">{{ user.name }} &nbsp; &nbsp; {{ user.bio }}</h3>
+        </div>
+    </div>
+</div>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            {% for object in quesryset %}
+                <div class="col-lg-4 thumb" style="margin-bottom: 30px;">
+                    <a class="thumbnail" href="{{ object.get_absolute_url }}" style="border: 1px;">
+                        <img class="img-responsive" src="{{ object.image.url }}" style="height: 250px;">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+    <br><br><br>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Found...</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Follower</th>
+                    </tr>
+                    </thead>
+
+                    {% for instance in instance %}
+                        <tr>
+                            <td> <img src="{{ instance.follower.avatar.url }}" class="img-circle" style="width: 40px; height: 40px; float: left; margin-top: 5px; margin-right: 5px;">
+                                <a href="{% url "otherprofile" instance.follower.id %}"> {{ instance.follower.username }} </a></td>
+                           <!--  <td>{{ instance.follower.username }}</td> -->
+{#                            <td><a href="{% url 'unfollow' fu.id %}" class="btn btn-primary btn-sm" role="button">Unfollow</a></td>#}
+                        </tr>
+
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{#<div class="row">#}
+{#    <div class="col-md-12">#}
+{#        <div class="panel panel-default">#}
+{#            <div class="user col-md-4">#}
+{#                {% if user.avatar %}#}
+{#                    <img src="{{ user.avatar.url }}" class="img-circle img-resposive">#}
+{#                {% endif %}#}
+{#            </div>#}
+{#            <div class="panel-body col-md-4">#}
+{#                <table class="table">#}
+{#                    <tbody>#}
+{#                    <tr>#}
+{#                        <td>Name</td>#}
+{#                        <td>{{ user.username }}</td>#}
+{#                    </tr>#}
+{#                    <tr>#}
+{#                        <td>Posts</td>#}
+{#                        <td>{{ user.post.count}}</td>#}
+{#                    </tr>#}
+{##}
+{#                    <tr>#}
+{#                        <td><a href="{% url "profile_follower" request.user.id %}"> Follower </a></td>#}
+{#                        <td>{{ user.following.count}}</td>#}
+{#                    </tr>#}
+{#                    <tr>#}
+{#                        <td><a href="{% url "profile_following" request.user.id %}">Following </a></td>#}
+{#                        <td>{{ user.follower.count}}</td>#}
+{#                    </tr>#}
+{#                    <tr>#}
+{#                        <td>Gender</td>#}
+{#                        <td>{{ user.gender }}</td>#}
+{#                    </tr>#}
+{##}
+{#                    </tbody>#}
+{#                </table>#}
+{#            </div>#}
+{#            <div class="col-md-4"><br>#}
+{#                <a href="{% url "editprofile" request.user.id %}" class="btn btn-primary" role="button">Edit Profile</a>#}
+{#                <br><br>#}
+{#            </div>#}
+{#            <div class="col-md-4">#}
+{#                <label style="text-align-all:right">Bio</label>#}
+{#                <p> {{ user.bio }}</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
