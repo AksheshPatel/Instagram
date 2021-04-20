@@ -40,7 +40,7 @@ pdfquery==0.4.3
 pdfrw==0.4
 Pillow==4.3.0
 pluggy==0.6.0
-py==1.5.2
+py==1.10.0
 pylint==1.5.2
 pyPdf==1.13
 PyPDF2==1.26.0
