@@ -31,7 +31,7 @@ lazy-object-proxy==1.2.1
 logilab-common==1.1.0
 lxml==4.1.1
 mixer==6.0.0
-numpy==1.13.3
+numpy==1.22.0
 olefile==0.44
 pandas==0.21.0
 pathspec==0.5.0
